@@ -1,0 +1,6 @@
+[theme]
+name=DarkDM
+description=lightdm nody-greeter theme by Dark Tornado
+engine=nody-greeter
+url=index.html
+session=cinnamon
