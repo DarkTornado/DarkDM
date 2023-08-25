@@ -36,8 +36,8 @@ if (!window.lightdm) {
 	];
 
 	lightdm.users = [
-		{ username: "demo_user", display_name: "DemoUser", image :"images/default-profile.svg", session: 'cinnamon' },
-		{ username: "user_2", display_name: "User2", image :"images/default-profile.svg", session: 'gnome' }
+		{ username: "demo_user", display_name: "DemoUser", image :"profile.jpg", session: 'cinnamon' },
+		{ username: "user_2", display_name: "User2", image :"profile.jpg", session: 'gnome' }
 	];
 
 	lightdm.show_prompt = new Prompt("show_prompt");
