@@ -235,10 +235,6 @@
 </style>
 
 <body>
-    <div id="cover">
-        <br><br><br>
-        <marquee>Screen was Locked</marquee>
-    </div>
     <div class="title">
         <div class="dropdown">
             <img class="power" src="./images/power-off.svg" onclick="openPowerMenu();">
@@ -397,11 +393,9 @@
         });
         document.body.addEventListener('mousemove', (e) => {
             tick = 30;
-            document.getElementById("cover").style.display = "none";
         });
         document.body.addEventListener('keydown', (e) => {
             tick = 30;
-            document.getElementById("cover").style.display = "none";
 
             if (event.ctrlKey) {
                 var key = event.keyCode;
@@ -426,7 +420,7 @@
             updateClock();
             if (tick > 0) tick--;
             if (tick == 1) {
-                document.getElementById("cover").style.display = "block";
+                location.href = "locked.html";
             }
         }
 
