@@ -151,7 +151,7 @@
     }
 
     div.user_name {
-        padding: 8px;
+        padding: 8px 0px;
         font-size: 30px;
         width: 100%;
     }
@@ -310,7 +310,6 @@
         }
 
         function show_prompt(msg) {
-            if (msg == 'Password: ') return;
             print(msg);
         }
 
@@ -403,6 +402,22 @@
         document.body.addEventListener('keydown', (e) => {
             tick = 30;
             document.getElementById("cover").style.display = "none";
+
+            if (event.ctrlKey) {
+                var key = event.keyCode;
+                if (49 <= key && key <= 57) {
+                    var userId = key - 49;
+                    if (userId < lightdm.users.length) {
+                        selectUser(userId);
+                    }
+                }
+                if (event.altKey && key == 46) {
+                    lightdm.restart();
+                }
+            }
+            if (event.altKey && key == 37) {
+                history.back();
+            }
         });
 
         var tick = 30;
